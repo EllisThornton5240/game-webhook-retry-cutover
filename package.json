@@ -1,0 +1,21 @@
+{
+  "name": "game-webhook-retry-cutover",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx",
+    "seed:event": "tsx src/publish_asset_event.ts",
+    "run:worker": "tsx src/moderation_queue_worker.ts",
+    "run:webhook": "tsx src/moderation_receiver.ts"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}
